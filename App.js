@@ -9,6 +9,7 @@ import Home from './screens/Home';
 import Detail from './screens/Detail';
 import SettingsMenu from './screens/SettingsMenu';
 import SettingsScreen from './screens/SettingsScreen';
+import NotificationScreen from './screens/NotificationScreen';
 
 const Stack = createStackNavigator();
 
@@ -43,6 +44,11 @@ export default function App() {
         <Stack.Screen 
           name="SettingsScreen" 
           component={SettingsScreen} 
+        />
+        <Stack.Screen 
+          name="NotificationScreen" 
+          component={NotificationScreen} 
+          options={{ title: 'Notification Setup' }} 
         />
       </Stack.Navigator>
     </NavigationContainer>
