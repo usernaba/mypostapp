@@ -26,7 +26,7 @@ export default function App() {
         <Stack.Screen 
           name="Home" 
           component={Home} 
-          options={{ title: 'Dashboard', headerLeft: null }} // headerLeft: null prevents going back to login
+          options={{ title: 'Dashboard', headerLeft: null }}
         />
       </Stack.Navigator>
     </NavigationContainer>
