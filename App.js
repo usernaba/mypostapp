@@ -2,10 +2,12 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-// Import the screens you created
+
 import Signup from './screens/Signup';
 import Login from './screens/Login';
 import Home from './screens/Home';
+import Detail from './screens/Detail';
+
 
 const Stack = createStackNavigator();
 
@@ -26,7 +28,12 @@ export default function App() {
         <Stack.Screen 
           name="Home" 
           component={Home} 
-          options={{ title: 'Dashboard', headerLeft: null }}
+          options={{ title: 'Dashboard', headerLeft: null }} // headerLeft: null prevents going back to login
+        />
+        <Stack.Screen 
+          name="Detail" 
+          component={Detail} 
+          options={{ title: 'Item Details' }} 
         />
       </Stack.Navigator>
     </NavigationContainer>
