@@ -7,7 +7,8 @@ import Signup from './screens/Signup';
 import Login from './screens/Login';
 import Home from './screens/Home';
 import Detail from './screens/Detail';
-
+import SettingsMenu from './screens/SettingsMenu';
+import SettingsScreen from './screens/SettingsScreen';
 
 const Stack = createStackNavigator();
 
@@ -28,12 +29,20 @@ export default function App() {
         <Stack.Screen 
           name="Home" 
           component={Home} 
-          options={{ title: 'Dashboard', headerLeft: null }} // headerLeft: null prevents going back to login
+          options={{ title: 'Dashboard', headerLeft: null }} 
         />
         <Stack.Screen 
           name="Detail" 
           component={Detail} 
           options={{ title: 'Item Details' }} 
+        />
+        <Stack.Screen 
+          name="SettingsMenu" 
+          component={SettingsMenu} 
+        />
+        <Stack.Screen 
+          name="SettingsScreen" 
+          component={SettingsScreen} 
         />
       </Stack.Navigator>
     </NavigationContainer>
